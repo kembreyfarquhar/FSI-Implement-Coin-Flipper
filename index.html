@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Penny Flip Game</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
     <main>
-        <H1>Penny Flip Game</H1>
+      <h1>Penny Flip Game</h1>
+      <div>
+        <button id="flip">Flip</button>
+        <button id="clear">Clear</button>
+        <img
+          id="penny-img"
+          src="./assets/images/penny-heads.jpg"
+          alt="close up photo of a U.S. penny"
+        />
+        <h4 id="message">Let's get rolling!</h4>
+        <hr />
         <div>
-            <div>Penny Image Display, Button Controls, and Status Message</div>
-            <hr>
-            <div>
-                <h2>Scoreboard</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Number of Heads</th>
-                            <th>Percentage Heads</th>
-                            <th>Number of Tails</th>
-                            <th>Percentage Tails</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="heads">0</td>
-                            <td id="heads-percent">0%</td>
-                            <td id="tails">0</td>
-                            <td id="tails-percent">0%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+          <h2>Scoreboard</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Number of Heads</th>
+                <th>Percentage Heads</th>
+                <th>Number of Tails</th>
+                <th>Percentage Tails</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="heads">0</td>
+                <td id="heads-percent">0%</td>
+                <td id="tails">0</td>
+                <td id="tails-percent">0%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
     </main>
     <script src="assets/js/script.js"></script>
-</body>
+  </body>
 </html>
