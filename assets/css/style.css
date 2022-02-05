@@ -1,71 +1,202 @@
-html, 
+:root {
+  --font-main-family: "Lato", sans-serif;
+  --font-number-family: "Press Start 2P", cursive;
+  --main-bg-color: rgb(255, 188, 100);
+  --main-bg-dark: rgb(172, 98, 0);
+  --secondary-color: rgb(74, 129, 232);
+  --shadow-color: rgba(0, 0, 0, 0.544);
+  --main-contrast-font: rgb(42, 42, 42);
+  --tie-font-color: rgb(121, 121, 121);
+  --winning-font-color: rgb(3, 171, 23);
+  --losing-font-color: rgb(203, 31, 31);
+}
+
+html,
 body {
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: var(--font-main-family);
+  color: var(--main-contrast-font);
 }
 
 body {
-    min-height: 100vh;
-    background: linear-gradient(to bottom left, orange, white);
+  background-color: var(--main-bg-color);
 }
 
 main {
-    background-color: white;
-    margin: 20px;
-    padding: 25px;
+  margin: 20px;
+  padding: 25px;
 }
 
+#game-container {
+  padding-bottom: 20px;
+}
 h1 {
-    margin: 0;
-    padding: 25px;
+  margin: 0;
+  font-weight: 900;
+}
+
+/* Image container styles */
+#image-container {
+  height: 250px;
+}
+
+#penny-image {
+  max-height: 200px;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.winning {
+  color: var(--winning-font-color);
+}
+
+.losing {
+  color: var(--losing-font-color);
+}
+
+.tie {
+  color: var(--tie-font-color);
 }
 
 /* Controls and Message Styles */
+#top-container {
+  background-color: white;
+  margin-top: 20px;
+  width: 420px;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px var(--shadow-color), -1px -1px 5px var(--shadow-color);
+}
+
 .controls {
-    padding: 20px;
-    border: 1px solid black;
+  width: 200px;
+  padding: 20px;
+  font-weight: 400;
 }
 
 .message-container {
-    color: darkorange;
-    font-size: 1.5em;
-    font-weight: bold;
+  color: rgb(75, 75, 75);
+  font-size: 1.5em;
+  font-weight: 900;
+  font-style: italic;
+  padding-bottom: 5px;
+}
+
+#message {
+  margin: 0;
 }
 
 button {
-    font-size: 1.5em;
-    margin-right: 10px;
-    border-radius: 10px;
+  font-size: 1.5em;
+  border-radius: 10px;
+  padding: 4px 16px;
+  color: white;
+  cursor: pointer;
 }
 
 #flip,
 #roll {
-    background: linear-gradient(to bottom left, lightblue, white);
+  background-color: var(--secondary-color);
 }
 
 #flip:hover,
 #roll:hover {
-    background: linear-gradient(to bottom left, darkblue, lightblue);
+  background: linear-gradient(
+    to bottom left,
+    rgb(0, 27, 57),
+    var(--secondary-color)
+  );
 }
 
 #clear {
-    background: linear-gradient(to bottom left, orange, white);
+  background-color: var(--main-bg-dark);
 }
 
 #clear:hover {
-    background: linear-gradient(to bottom left, red, orange);
+  background: linear-gradient(
+    to bottom left,
+    rgb(43, 25, 11),
+    var(--main-bg-dark)
+  );
 }
 
 /* Scoreboard Styles */
-table, 
-th, 
-td {
-    border: 1px solid darkorange;
-    margin: 0 auto;
+
+#scoreboard {
+  font-weight: 700;
+  font-size: 1.3em;
+  margin: 50px 0 10px 0;
 }
 
-td {
-    padding: 5px;
-    font-weight: bold;
+table {
+  display: table;
+}
+
+table,
+th,
+td,
+tr {
+  margin: 0 auto;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: 400;
+  font-size: 1.1em;
+  padding: 13px 30px;
+}
+
+thead {
+  color: white;
+  background-color: var(--secondary-color);
+}
+
+thead > tr > :first-child {
+  border-top-left-radius: 10px;
+}
+
+thead > tr > :last-child {
+  border-top-right-radius: 10px;
+}
+
+tbody > tr {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 1px 1px 6px var(--shadow-color);
+}
+
+tbody > tr > td {
+  background-color: white;
+  font-family: var(--font-number-family);
+  font-size: 1.5em;
+  padding: 20px 0px;
+}
+
+tbody > tr > :first-child {
+  border-bottom-left-radius: 10px;
+}
+
+tbody > tr > :last-child {
+  border-bottom-right-radius: 10px;
 }
