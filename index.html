@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Penny Flip Game</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,900&family=Press+Start+2P&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./assets/css/style.css" />
-    </head>
-    <body>
-        <main>
-            <div id="game-container" class="flex-center col justify-center w-100">
-                <h1>Penny Flip Game</h1>
-                <div id="top-container" class="flex-center col justify-center w-100">
-                    <div id="image-container" class="flex-center justify-center w-100">
-                        <img
-                            id="penny-image"
-                            src="./assets/images/penny-heads.jpg"
-                            alt="close up photo of a U.S. penny"
-                        />
-                    </div>
-                    <div class="controls flex-center justify-evenly w-100">
-                        <button id="flip">Flip</button>
-                        <button id="clear">Clear</button>
-                    </div>
-                    <div class="message-container">
-                        <h3 id="message">Let's get rolling!</h3>
-                    </div>
-                </div>
-                <div>
-                    <h2 id="scoreboard">💥•&nbsp;&nbsp;Scoreboard&nbsp;&nbsp;•💥</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Total Heads</th>
-                                <th>% Heads</th>
-                                <th>Total Tails</th>
-                                <th>% Tails</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td id="heads">0</td>
-                                <td id="heads-percent" class="tie">0%</td>
-                                <td id="tails">0</td>
-                                <td id="tails-percent" class="tie">0%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </main>
-        <script src="assets/js/eventEmitter.js"></script>
-        <script src="assets/js/script.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penny Flip Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div id="game-container" class="flex-center col justify-center w-100">
+        <h1>Penny Flip Game</h1>
+        <div id="top-container" class="flex-center col justify-center w-100">
+          <div id="image-container" class="flex-center justify-center w-100">
+            <img
+              id="penny-image"
+              src="./assets/images/penny-heads.jpg"
+              alt="close up photo of a U.S. penny"
+            />
+          </div>
+          <div class="controls flex-center justify-evenly w-100">
+            <button id="flip">Flip</button>
+            <button id="clear">Clear</button>
+          </div>
+          <div class="message-container">
+            <h3 id="message">Let's get rolling!</h3>
+          </div>
+        </div>
+        <div>
+          <h2 id="scoreboard">💥•&nbsp;&nbsp;Scoreboard&nbsp;&nbsp;•💥</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Total Heads</th>
+                <th>% Heads</th>
+                <th>Total Tails</th>
+                <th>% Tails</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td id="heads">0</td>
+                <td id="heads-percent" class="tie">0%</td>
+                <td id="tails">0</td>
+                <td id="tails-percent" class="tie">0%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/eventEmitter.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
