@@ -20,7 +20,7 @@ const makeTie = elementsArray => elementsArray.forEach(element => (element.class
 const makeWin = element => (element.classList = 'winning')
 const makeLose = element => (element.classList = 'losing')
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   // ================================== DOM ELEMENTS  ================================== //
   let flipBtn = document.getElementById('flip')
   let clearBtn = document.getElementById('clear')
@@ -76,13 +76,11 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   // ==================================  FLIP CLICK  ================================== //
-  flipBtn.addEventListener('click', function () {
+  flipBtn.addEventListener('click', () => {
     events.emit('FLIP', Math.random() < 0.5)
     events.emit('CALCULATE_PERCENTAGES')
   })
 
   // ==================================  CLEAR CLICK  ================================== //
-  clearBtn.addEventListener('click', function () {
-    events.emit('RESET')
-  })
+  clearBtn.addEventListener('click', () => events.emit('RESET'))
 })
